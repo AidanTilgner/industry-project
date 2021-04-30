@@ -28,8 +28,8 @@ class App extends React.Component{
               <Home/>
             }}
           />
-          <Route exact path="/seedform">
-            <SeedForm />
+          <Route exact path="/verify">
+            <Verify/>
           </Route>
         </Switch>
       </div>
