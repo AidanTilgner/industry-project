@@ -8,6 +8,7 @@ import {
 } from 'react-router-dom';
 import GettingStarted from './pages/GettingStarted/GettingStarted';
 import Home from './pages/Home/Home';
+import SeedForm from './components/SeedForm/SeedForm';
 
 class App extends React.Component{
   state={
@@ -31,6 +32,9 @@ class App extends React.Component{
               <Home/>
             }}
           />
+          <Route exact path="/seedform">
+            <SeedForm />
+          </Route>
         </Switch>
       </div>
     );
