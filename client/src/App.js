@@ -17,14 +17,16 @@ class App extends React.Component{
   render(){
     return (
       <div className="App">
+        <p>Hello</p>
         <Switch>
           {this.state.isUser ? <Redirect exact from="/" to="/home"/> : <Redirect exact from="/" to="/getting-started"/>}
-          <Route path="/getting-started"
-            render={props =>{
-              <GettingStarted/>
-            }}
-          />
-          <Route path="/home"
+          <Route exact path="/getting-started">
+            <GettingStarted/>
+          </Route>
+          <Route path="/test">
+            <p>hey</p>
+          </Route>
+          <Route exact path="/home"
             render={props => {
               <Home/>
             }}

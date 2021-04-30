@@ -1,7 +1,6 @@
-import React from 'react'
-import { Switch, Route, Link } from 'react-router-dom';
-import Setup from '../../components/Setup/Setup.jsx';
-import SetupContent from '../../components/SetupContent/SetupContent.jsx'
+import React from 'react';
+import { Switch, Route, Link, Redirect } from 'react-router-dom';
+import Setup from '../../components/Setup/Setup';
 
 function GettingStarted() {
     return (
@@ -10,7 +9,17 @@ function GettingStarted() {
                 <Route path="/welcome"
                     render={props => {
                         <Setup
-                            content={<SetupContent/>}
+                            content="welcome"
+                            buttonContent="begin"
+                            nextLink="/welcome-continued"
+                        />
+                    }}
+                />
+                <Route path="/welcome"
+                    render={props => {
+                        <Setup
+                            content="welcome-continued"
+                            buttonContent="begin"
                             nextLink="/1"
                         />
                     }}
@@ -18,7 +27,8 @@ function GettingStarted() {
                 <Route path="/1" 
                     render={props => {
                         <Setup
-                            content={<SetupContent/>}
+                            content="1"
+                            buttonContent="proceed"
                             nextLink="/2"
                         />
                     }}
@@ -26,7 +36,8 @@ function GettingStarted() {
                 <Route path="/2" 
                     render={props => {
                         <Setup
-                            content={<SetupContent/>}
+                            content="2"
+                            buttonContent="generate"
                             nextLink="/3"
                         />
                     }}
@@ -34,7 +45,8 @@ function GettingStarted() {
                 <Route path="/3" 
                     render={props => {
                         <Setup
-                            content={<SetupContent/>}
+                            content="3"
+                            buttonContent="proceed"
                             nextLink="/4"
                         />
                     }}
@@ -42,7 +54,8 @@ function GettingStarted() {
                 <Route path="/4" 
                     render={props => {
                         <Setup
-                            content={<SetupContent/>}
+                            content="4"
+                            buttonContent="proceed"
                             nextLink="/5"
                         />
                     }}
@@ -50,7 +63,8 @@ function GettingStarted() {
                 <Route path="/5" 
                     render={props => {
                         <Setup
-                            content={<SetupContent/>}
+                            content="5"
+                            buttonContent="proceed"
                             nextLink="/6"
                         />
                     }}
@@ -58,8 +72,18 @@ function GettingStarted() {
                 <Route path="/6" 
                     render={props => {
                         <Setup
-                            content={<SetupContent/>}
+                            content="6"
+                            buttonContent="proceed"
                             nextLink="/7"
+                        />
+                    }}
+                />
+                <Route path="/7" 
+                    render={props => {
+                        <Setup
+                            content="7"
+                            buttonContent="done"
+                            nextLink="/home"
                         />
                     }}
                 />
