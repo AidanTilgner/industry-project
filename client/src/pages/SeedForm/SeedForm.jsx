@@ -3,30 +3,24 @@ import axios from 'axios';
 import './SeedForm.scss';
 import './server/library.json';
 
-class SeedForm extends React.Component { 
+export default class SeedForm extends React.Component { 
 
     state = {
         words: [],
     }
 
     componentDidMount() {
+        console.log('hello')
         axios
-            .get('http://localhost:8080')
-            .then(({data}) => {
+        .get('http://localhost:8080/')
+        .then(res => { 
+                console.log(res)
                 this.setState({
-                    words: data
+                    words: res.data
                 })
             })
             .catch(err => {
                 console.error(err)
             })
     }
-
-    render() { 
-        return(
-            <h1>SeedForm</h1>
-        )
-    }
-}
-
-export default SeedForm;
+} 
