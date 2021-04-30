@@ -5,7 +5,7 @@ class SetupContent extends React.Component{
     return (
         <div>
             {
-                props.content === "welcome" &&
+                this.props.content === "welcome" &&
                 <>
                     <h3 className="setup__title">Welcome</h3>
                     <p className="setup__paragraph">
@@ -20,6 +20,12 @@ class SetupContent extends React.Component{
                         Please write down your 12-word phase, in order, and keep 
                         in a safe place. You will not be able to recover your phrase if you lose or forget it.
                     </p>
+                </>
+            }
+            {
+                this.props.content === "generate" &&
+                <>
+                    
                 </>
             }
         </div>
