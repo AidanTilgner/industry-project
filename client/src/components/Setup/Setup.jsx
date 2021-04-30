@@ -9,7 +9,10 @@ function Setup(props) {
             <SetupContent
                 content={props.content}
             />
-            <button>{props.buttonContent}</button>
+            {
+                props.buttonContent &&
+                <button>{props.buttonContent}</button>
+            }
         </div>
     )
 }
