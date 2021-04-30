@@ -5,9 +5,10 @@ import { ReactComponent as Logo } from '../../assets/images/Logo.svg';
 function Setup(props) {
     return (
         <div>
-            <p>Hey I'm rendering</p>
             <Logo/>
-            <SetupContent/>
+            <SetupContent
+                content={props.content}
+            />
             <button>{props.buttonContent}</button>
         </div>
     )

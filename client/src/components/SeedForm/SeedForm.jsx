@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 import './SeedForm.scss';
-import './server/library.json';
 
 class SeedForm extends React.Component { 
 
