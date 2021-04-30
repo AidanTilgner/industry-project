@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 import './SeedForm.scss';
-
 class SeedForm extends React.Component { 
 
     state = {
@@ -10,7 +9,7 @@ class SeedForm extends React.Component {
 
     componentDidMount() {
         axios
-            .get('http://localhost:8080')
+            .get('http://localhost:8080/words')
             .then(({data}) => {
                 this.setState({
                     words: data
