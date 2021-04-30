@@ -6,14 +6,18 @@
     background-position: center;
     background-size: cover;
     color: #E5E5E5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .setup {
     position: absolute;
     width: 300px;
     height: 308px;
-    left: 40px;
-    top: 261px;
+    // left: 40px;
+    // top: 261px;
 
     &-button { 
         width: 250px;
