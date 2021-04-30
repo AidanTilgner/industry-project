@@ -1,8 +1,5 @@
 import './App.scss';
-<<<<<<< HEAD
-=======
 import React from 'react';
->>>>>>> d5907d2bce775d7a823599b31a7b9c384f5aed00
 import {
   Switch, 
   Link,
