@@ -53,15 +53,6 @@ class GettingStarted extends React.Component{
                     />
                 }
                 {
-                    this.state.page === "ready" &&
-                    <Setup
-                        content="ready"
-                        buttonContent=""
-                        clickHandler={this.clickHandler}
-                        nextPage="success"
-                    />
-                }
-                {
                     this.state.page === "success" &&
                     <Setup
                         content="success"
