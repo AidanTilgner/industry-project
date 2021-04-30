@@ -6,7 +6,9 @@ function Setup(props) {
     return (
         <div>
             <Logo/>
-            <SetupContent/>
+            <SetupContent
+                content={props.content}
+            />
             <button>{props.buttonContent}</button>
         </div>
     )
