@@ -45,6 +45,12 @@ class SetupContent extends React.Component{
                     </ul>
                 </>
             }
+            {
+                this.props.content === "smart-seed" &&
+                <>
+                    
+                </>
+            }
         </div>
     )}
 }
