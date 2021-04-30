@@ -6,6 +6,13 @@ class GettingStarted extends React.Component{
     state={
         page: 'welcome',
     }
+
+    clickHandler = (nextPage) => {
+        this.setState({
+            page: nextPage,
+        })
+    }
+
     render(){
         return (
             <div className="getting-started">
@@ -14,6 +21,8 @@ class GettingStarted extends React.Component{
                     <Setup
                         content="welcome"
                         buttonContent="Continue"
+                        clickHandler={this.clickHandler}
+                        nextPage="generate"
                     />
                 }
                 {
@@ -21,6 +30,8 @@ class GettingStarted extends React.Component{
                     <Setup
                         content="generate"
                         buttonContent="Generate"
+                        clickHandler={this.clickHandler}
+                        nextPage="smart-seed"
                     />
                 }
                 {
@@ -28,6 +39,8 @@ class GettingStarted extends React.Component{
                     <Setup
                         content="smart-seed"
                         buttonContent="Continue"
+                        clickHandler={this.clickHandler}
+                        nextPage="verify-smart-seed"
                     />
                 }
                 {
@@ -35,6 +48,8 @@ class GettingStarted extends React.Component{
                     <Setup
                         content="verify-smart-seed"
                         buttonContent=""
+                        clickHandler={this.clickHandler}
+                        nextPage="ready"
                     />
                 }
                 {
@@ -42,6 +57,8 @@ class GettingStarted extends React.Component{
                     <Setup
                         content="ready"
                         buttonContent=""
+                        clickHandler={this.clickHandler}
+                        nextPage="success"
                     />
                 }
                 {
@@ -49,6 +66,9 @@ class GettingStarted extends React.Component{
                     <Setup
                         content="success"
                         buttonContent="Done"
+                        clickHandler={() => {
+                            this.props.history.push('/verify')
+                        }}
                     />
                 }
             </div>

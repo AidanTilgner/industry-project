@@ -11,7 +11,13 @@ function Setup(props) {
             />
             {
                 props.buttonContent &&
-                <button>{props.buttonContent}</button>
+                <button
+                    onClick={() => {
+                        props.clickHandler(props.nextPage)
+                    }}
+                >
+                    {props.buttonContent}
+                </button>
             }
         </div>
     )
