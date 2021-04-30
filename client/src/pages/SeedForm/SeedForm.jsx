@@ -12,7 +12,7 @@ export default class SeedForm extends React.Component {
     componentDidMount() {
         console.log('hello')
         axios
-        .get('http://localhost:8080/')
+        .get('http://localhost:8080/words')
         .then(res => { 
                 console.log(res)
                 this.setState({
