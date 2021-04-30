@@ -5,7 +5,7 @@ class SetupContent extends React.Component{
     return (
         <div>
             {
-                props.content === "welcome" &&
+                this.props.content === "welcome" &&
                 <>
                     <h3 className="setup__title">Welcome</h3>
                     <p className="setup__paragraph">
