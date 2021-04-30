@@ -1,14 +1,16 @@
 import React from 'react';
 import SetupContent from '../SetupContent/SetupContent';
 import { ReactComponent as Logo } from '../../assets/images/Logo.svg';
-import './Setup.scss';
+import './Setup.scss'
 
 function Setup(props) {
     return (
         <div className="setup">
-            <Logo/>
+            <Logo className="setup__logo"/>
             <SetupContent
                 content={props.content}
+                nextPage={props.nextPage}
+                bannerClickHandler={props.clickHandler}
             />
             {
                 props.buttonContent &&
