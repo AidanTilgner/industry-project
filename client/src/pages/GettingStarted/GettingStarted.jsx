@@ -6,24 +6,6 @@ function GettingStarted() {
     return (
         <div className="getting-started">
             <Switch>
-                <Route path="/welcome"
-                    render={props => {
-                        <Setup
-                            content="welcome"
-                            buttonContent="begin"
-                            nextLink="/welcome-continued"
-                        />
-                    }}
-                />
-                <Route path="/welcome"
-                    render={props => {
-                        <Setup
-                            content="welcome-continued"
-                            buttonContent="begin"
-                            nextLink="/1"
-                        />
-                    }}
-                />
                 <Route path="/1" 
                     render={props => {
                         <Setup
