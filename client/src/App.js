@@ -1,12 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
+import React from 'react';
 import {
   Switch, 
   Link,
   Route,
   Redirect
 } from 'react-router-dom';
-import React from 'react';
+import GettingStarted from './pages/GettingStarted/GettingStarted';
+import Home from './pages/Home/Home';
 
 class App extends React.Component(){
   state={
