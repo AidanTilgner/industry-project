@@ -1,8 +1,13 @@
 const express = require('express');
 const router = express.Router();
+const utils = require('../utils');
 
 router.get('/', (req, res) => {
-    res.status(200).send('working');
+    utils.getWords()
+    .then((word) => res.json(word))
+    .catch((error) => {
+        res.send(error.message);
+    })
 })
 
 module.exports = router;
