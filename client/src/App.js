@@ -2,7 +2,6 @@ import './App.scss';
 import React from 'react';
 import {
   Switch, 
-  Link,
   Route,
   Redirect
 } from 'react-router-dom';
