@@ -14,7 +14,7 @@ function Setup(props) {
             />
             {
                 props.buttonContent &&
-                <button
+                <button className="setup-button"
                     onClick={() => {
                         props.clickHandler(props.nextPage)
                     }}

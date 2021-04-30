@@ -9,7 +9,7 @@ class SeedForm extends React.Component {
 
     componentDidMount() {
         axios
-            .get('http://localhost:8080/words')
+            .get('http://localhost:8080/')
             .then(({data}) => {
                 this.setState({
                     words: data

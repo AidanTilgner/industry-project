@@ -1,9 +1,13 @@
 import React from 'react'
+import { ReactComponent as MasterCardTitle } from '../../assets/images/MasterCardTitle.svg';
+import './Home.scss';
 
 function Home() {
     return (
         <div className="home">
-            {/* import logo */}
+            <div className="home-image">
+                <MasterCardTitle />
+            </div>
             <h1 className="home-welcome">
                 Welcome to the pinnacle of online safety
             </h1>
