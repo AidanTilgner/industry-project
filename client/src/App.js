@@ -1,5 +1,4 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 import React from 'react';
 import {
   Switch, 
@@ -10,7 +9,7 @@ import {
 import GettingStarted from './pages/GettingStarted/GettingStarted';
 import Home from './pages/Home/Home';
 
-class App extends React.Component(){
+class App extends React.Component{
   state={
     isUser: false,
   }
